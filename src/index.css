@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Jost:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Sophia Henin — Forest Immersive System */
+    --background: 155 36% 17%;
+    --foreground: 36 38% 92%;
+
+    --card: 155 30% 22%;
+    --card-foreground: 36 38% 92%;
+
+    --popover: 155 30% 20%;
+    --popover-foreground: 36 38% 92%;
+
+    --primary: 41 50% 54%;
+    --primary-foreground: 155 36% 12%;
+
+    --secondary: 155 28% 28%;
+    --secondary-foreground: 36 38% 92%;
+
+    --muted: 155 20% 30%;
+    --muted-foreground: 36 20% 68%;
+
+    --accent: 41 50% 54%;
+    --accent-foreground: 155 36% 12%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 155 18% 32%;
+    --input: 155 18% 28%;
+    --ring: 41 50% 54%;
+
+    --radius: 1rem;
+
+    --sidebar-background: 155 36% 15%;
+    --sidebar-foreground: 36 38% 92%;
+    --sidebar-primary: 41 50% 54%;
+    --sidebar-primary-foreground: 155 36% 12%;
+    --sidebar-accent: 155 20% 30%;
+    --sidebar-accent-foreground: 36 38% 92%;
+    --sidebar-border: 155 18% 28%;
+    --sidebar-ring: 41 50% 54%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    @apply text-sophia-text font-sans antialiased;
+    background-color: #1B3A2D;
+    background-image:
+      url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.72' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E"),
+      linear-gradient(158deg, #1B3A2D 0%, #243F32 18%, #2D5442 42%, #3A6650 68%, #274838 85%, #1F3D2E 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3 { @apply font-serif; }
+  h4, h5, h6 { @apply font-sans; }
+
+  ::selection { background: #C9A84C; color: #1B3A2D; }
+}
+
+@layer components {
+  /* Scroll-reveal — JS adds .is-visible */
+  .sophia-reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition:
+      opacity 0.95s cubic-bezier(0.22, 1, 0.36, 1),
+      transform 0.95s cubic-bezier(0.22, 1, 0.36, 1);
+  }
+  .sophia-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  .sophia-reveal-d1 { transition-delay: 0.1s; }
+  .sophia-reveal-d2 { transition-delay: 0.2s; }
+  .sophia-reveal-d3 { transition-delay: 0.32s; }
+  .sophia-reveal-d4 { transition-delay: 0.44s; }
+
+  /* Glass panel */
+  .sophia-glass {
+    background: rgba(255, 255, 255, 0.07);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(201, 168, 76, 0.15);
+  }
+
+  /* Gold divider line */
+  .sophia-divider {
+    width: 48px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #C9A84C, transparent);
+  }
+
+  /* Arch card shape */
+  .sophia-arch {
+    border-radius: 50% 50% 1.5rem 1.5rem / 35% 35% 1.5rem 1.5rem;
+  }
+
+  /* Gold gradient text */
+  .sophia-gold-text {
+    background: linear-gradient(135deg, #C9A84C 0%, #E3C97A 50%, #C9A84C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Container */
+  .sophia-container {
+    @apply max-w-6xl mx-auto px-6 md:px-10;
+  }
+
+  /* Navbar scrolled state */
+  .navbar-scrolled {
+    background: rgba(27, 58, 45, 0.88) !important;
+    backdrop-filter: blur(20px) !important;
+    -webkit-backdrop-filter: blur(20px) !important;
+    border-bottom: 1px solid rgba(201, 168, 76, 0.12) !important;
+  }
+}
