@@ -153,7 +153,7 @@ const MapPage = () => {
   return (
     <>
       <Helmet>
-        <title>Propiedades — Sophia Henin</title>
+        <title>Propiedades — Asesor Demo</title>
         <meta name="description" content="Explora propiedades exclusivas en Tulum y Riviera Maya." />
       </Helmet>
 

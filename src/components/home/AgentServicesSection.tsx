@@ -76,7 +76,7 @@ const SERVICES = [
   },
 ];
 
-export default function SophiaServicesSection() {
+export default function AgentServicesSection() {
   const ref = useReveal();
   const navigate = useNavigate();
 

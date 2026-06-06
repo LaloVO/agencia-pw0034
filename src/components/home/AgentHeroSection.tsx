@@ -34,7 +34,7 @@ const PARTICLES = [
   { size: 2, left: '68%', delay: 7,    duration: 14 },
 ];
 
-export default function SophiaHeroSection() {
+export default function AgentHeroSection() {
   const [visible, setVisible] = useState(false);
   const [query, setQuery] = useState('');
   const navigate = useNavigate();
@@ -48,7 +48,7 @@ export default function SophiaHeroSection() {
 
   const whaNum = user?.telefono_usuario?.replace(/\D/g, '') ?? '';
   const whaUrl = whaNum
-    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Sophia, me interesa una asesoría inmobiliaria en la Riviera Maya.')}`
+    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Asesor Demo, me interesa una asesoría inmobiliaria en la Riviera Maya.')}`
     : '#';
 
   const handleSearch = (e: React.FormEvent) => {
@@ -129,7 +129,7 @@ export default function SophiaHeroSection() {
             className="font-serif text-sophia-cream/60 tracking-[0.38em] text-xs md:text-[13px] uppercase mb-4"
             style={{ letterSpacing: '0.38em' }}
           >
-            Sophia Henin
+            Asesor Demo
           </p>
         </div>
 

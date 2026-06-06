@@ -3,7 +3,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { X, Menu } from 'lucide-react';
 import { useSiteUser } from '@/hooks/useSiteUser';
 
-/* Botanical wheat icon — matches Sophia Henin logo */
+/* Botanical wheat icon — matches Asesor Demo logo */
 const BotanicalIcon = ({ size = 28 }: { size?: number }) => (
   <svg width={size} height={size} viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M14 24 L14 10" stroke="#C9A84C" strokeWidth="1.4" strokeLinecap="round"/>
@@ -41,7 +41,7 @@ export default function Navbar() {
 
   const whaNum = user?.telefono_usuario?.replace(/\D/g, '') ?? '';
   const whaUrl = whaNum
-    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Sophia, me interesa una asesoría inmobiliaria.')}`
+    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Asesor Demo, me interesa una asesoría inmobiliaria.')}`
     : '#';
 
   return (
@@ -59,7 +59,7 @@ export default function Navbar() {
               className="font-serif text-sophia-cream tracking-[0.22em] text-sm md:text-[15px] uppercase leading-none"
               style={{ letterSpacing: '0.22em' }}
             >
-              Sophia Henin
+              Asesor Demo
             </span>
           </Link>
 
@@ -117,7 +117,7 @@ export default function Navbar() {
           <div className="flex items-center justify-between px-6 h-16 border-b border-sophia-gold/15">
             <div className="flex items-center gap-2">
               <BotanicalIcon size={22} />
-              <span className="font-serif text-sophia-cream tracking-[0.2em] text-sm uppercase">Sophia Henin</span>
+              <span className="font-serif text-sophia-cream tracking-[0.2em] text-sm uppercase">Asesor Demo</span>
             </div>
             <button onClick={() => setOpen(false)} className="text-sophia-cream/70 hover:text-sophia-cream transition-colors">
               <X size={20} />

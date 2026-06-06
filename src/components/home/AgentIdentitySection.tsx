@@ -27,7 +27,7 @@ const VALUES = [
   { num: '03', title: 'Inversión con propósito', desc: 'Propiedades que integran arquitectura, naturaleza y alto potencial de plusvalía en los destinos más cotizados del Caribe Mexicano.' },
 ];
 
-export default function SophiaIdentitySection() {
+export default function AgentIdentitySection() {
   const ref = useReveal();
 
   return (

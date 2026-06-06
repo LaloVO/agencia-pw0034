@@ -40,7 +40,7 @@ const SkeletonCard = () => (
   </div>
 );
 
-export default function SophiaPropertiesSection() {
+export default function AgentPropertiesSection() {
   const ref = useReveal();
   const { properties, isLoading } = useProperties({ limit: 6 });
 

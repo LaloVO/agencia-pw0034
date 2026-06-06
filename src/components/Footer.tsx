@@ -18,12 +18,12 @@ const BotanicalIcon = ({ size = 32 }: { size?: number }) => (
 
 export default function Footer() {
   const { user } = useSiteUser();
-  const name = user?.nombre_usuario ?? 'Sophia Henin';
+  const name = user?.nombre_usuario ?? 'Asesor Demo';
   const phone = user?.telefono_usuario ?? '';
   const email = user?.correo_usuario ?? '';
   const whaNum = phone.replace(/\D/g, '');
   const whaUrl = whaNum
-    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Sophia, me interesa asesoría inmobiliaria.')}`
+    ? `https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Asesor Demo, me interesa asesoría inmobiliaria.')}`
     : '#';
 
   return (
@@ -39,7 +39,7 @@ export default function Footer() {
             className="font-serif text-sophia-cream tracking-[0.28em] text-base uppercase mt-3"
             style={{ letterSpacing: '0.28em' }}
           >
-            Sophia Henin
+            Asesor Demo
           </p>
           <p className="font-serif italic text-sophia-gold/70 text-sm mt-1">
             Vivienda en armonía con la naturaleza

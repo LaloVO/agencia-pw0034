@@ -10,7 +10,7 @@ export default function SolicitaInmueble() {
   return (
     <>
       <Helmet>
-        <title>Búsqueda Inteligente — Sophia Henin</title>
+        <title>Búsqueda Inteligente — Asesor Demo</title>
         <meta
           name="description"
           content="Completa nuestra solicitud inteligente de 6 pasos para encontrar tu propiedad ideal en Tulum y Riviera Maya."
@@ -24,7 +24,7 @@ export default function SolicitaInmueble() {
           {/* Header */}
           <div className="text-center mb-14">
             <p className="font-sans text-[10px] tracking-[0.3em] uppercase text-sophia-gold/70 mb-4">
-              Sophia Henin
+              Asesor Demo
             </p>
             <h1 className="font-serif text-sophia-cream font-light" style={{ fontSize: 'clamp(2rem, 5vw, 3.8rem)' }}>
               Búsqueda Inteligente

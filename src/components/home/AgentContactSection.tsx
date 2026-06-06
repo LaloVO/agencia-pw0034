@@ -22,7 +22,7 @@ function useReveal() {
   return ref;
 }
 
-export default function SophiaContactSection() {
+export default function AgentContactSection() {
   const ref = useReveal();
   const { user } = useSiteUser();
   const [name, setName] = useState('');
@@ -33,7 +33,7 @@ export default function SophiaContactSection() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const text = `Hola Sophia, soy ${name}. ${message} (${email})`;
+    const text = `Hola Asesor Demo, soy ${name}. ${message} (${email})`;
     const url = whaNum
       ? `https://wa.me/${whaNum}?text=${encodeURIComponent(text)}`
       : '#';
@@ -136,7 +136,7 @@ export default function SophiaContactSection() {
               <div>
                 <p className="font-sans text-[10px] tracking-[0.22em] uppercase text-sophia-gold/70 mb-2">WhatsApp directo</p>
                 <a
-                  href={`https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Sophia, me interesa una asesoría.')}`}
+                  href={`https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Asesor Demo, me interesa una asesoría.')}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="font-serif text-sophia-cream text-xl font-light hover:text-sophia-gold transition-colors"
@@ -159,7 +159,7 @@ export default function SophiaContactSection() {
             )}
 
             <a
-              href={`https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Sophia, me interesa una asesoría inmobiliaria en la Riviera Maya.')}`}
+              href={`https://wa.me/${whaNum}?text=${encodeURIComponent('Hola Asesor Demo, me interesa una asesoría inmobiliaria en la Riviera Maya.')}`}
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-[11px] tracking-[0.18em] uppercase px-8 py-3 rounded-full border border-sophia-gold/40 text-sophia-gold hover:bg-sophia-gold hover:text-sophia-forest transition-all duration-300 self-start"

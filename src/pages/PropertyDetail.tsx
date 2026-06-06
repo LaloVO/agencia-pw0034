@@ -20,7 +20,7 @@ const PropertyDetail = () => {
   });
 
   const whaNum = user?.telefono_usuario?.replace(/\D/g, '') ?? '';
-  const whaMsg = property ? encodeURIComponent(`Hola Sophia, me interesa la propiedad: ${property.nombre}`) : '';
+  const whaMsg = property ? encodeURIComponent(`Hola Asesor Demo, me interesa la propiedad: ${property.nombre}`) : '';
   const whaUrl = `https://wa.me/${whaNum}?text=${whaMsg}`;
 
   if (isLoading) {
@@ -63,7 +63,7 @@ const PropertyDetail = () => {
   return (
     <>
       <Helmet>
-        <title>{property.nombre} — Sophia Henin</title>
+        <title>{property.nombre} — Asesor Demo</title>
         <meta name="description" content={property.descripcion ?? property.nombre} />
       </Helmet>
 
